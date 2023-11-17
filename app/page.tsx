@@ -52,7 +52,7 @@ export default function Home() {
           e.preventDefault();
           const actual = correlation(points);
           setActual(actual);
-          fetch('/add-correlation', {
+          fetch('/correlation', {
             headers: {
               'Content-Type': 'application/json'
             },
@@ -85,7 +85,7 @@ export default function Home() {
       )}
       <div className="space-y-3">
         <p className="w-full mt-5">About</p>
-        <p>A website for seeing how people are at guessing the correlation of points. This website collects the actual and guessed correlations.</p>
+        <p>A website for seeing how people are at guessing the correlation of points. This website collects the actual and guessed correlations. The collected data can be viewed <a href="/results" className="underline">here</a>.</p>
         <p>The website is built with Next.js and hosted on Vercel. The code is available <a href="https://github.com/ShouvikGhosh2048/correlation" className="underline">here</a>.</p>
       </div>
     </div>
